@@ -9,12 +9,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class HpPrinter implements Printer{
 
-    @Value("${printer.name}")
-    private String name;
-
-
-    @Value("${printer.count:20}")
-    private  int count;
+//    @Value("${printer.name}")
+//    private String name;
+//
+//
+//    @Value("${printer.count:20}")
+//    private  int count;
 
 // 初始化bean方法
 //    @PostConstruct
@@ -22,11 +22,16 @@ public class HpPrinter implements Printer{
 //        count = 5;
 //    }
 
+//    @Override
+//    public void print(String message) {
+//        count--;
+//        System.out.println("剩餘次數" + count);
+//        System.out.println(name + ":" + message);
+//
+//    }
+
     @Override
     public void print(String message) {
-        count--;
-        System.out.println("剩餘次數" + count);
-        System.out.println(name + ":" + message);
-
+        System.out.println("HP印表機:" + message);
     }
 }
