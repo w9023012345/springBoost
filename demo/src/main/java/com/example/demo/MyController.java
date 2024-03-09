@@ -9,13 +9,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MyController {
 
-//    @RequestMapping("/test")
-//    public String test() {
-//        return  "Hello world";
-//    }
+    @RequestMapping("/test1")
+    public String test1(){
+        throw new RuntimeException("test1 error");
 
-    @RequestMapping("/test")
-    public ResponseEntity<String> test() {
-        return  ResponseEntity.status(HttpStatus.ACCEPTED).body("hello world");
+    }
+
+    @RequestMapping("/test2")
+    public String test2(){
+        throw new IllegalArgumentException("test2 error");
+
     }
 }
