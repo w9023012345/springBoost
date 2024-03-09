@@ -1,8 +1,6 @@
 package com.example.demo;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +15,20 @@ public class MyController {
         System.out.println("id:" + id);
         System.out.println("name:" + name);
         return "hello";
+    }
+
+    @RequestMapping("/test2")
+    public String test2(@RequestBody Student student) {
+        System.out.println("Student:" + student);
+        System.out.println("Student id:" + student.getId());
+        System.out.println("student name:" + student.getName());
+        return "heoolw test2";
+    }
+
+    @RequestMapping("/test3")
+    public String test3(@RequestHeader(defaultValue = "application/json", name = "Content-type") String info) {
+        System.out.println("header info:" + info);
+        return "hellow test3";
     }
 
 
