@@ -2,7 +2,6 @@ package com.example.demo;
 
 public class Student {
     Integer id;
-
     String name;
 
     public Integer getId() {
