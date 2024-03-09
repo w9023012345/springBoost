@@ -1,8 +1,18 @@
 package com.example.demo;
 
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
 public class Student {
+    @Min(100)
+    @NotNull
     Integer id;
+
+    @NotBlank
     String name;
+
+
 
     public Integer getId() {
         return id;
