@@ -41,19 +41,17 @@ public class StudentDaoImpl implements StudentDao{
     }
 
     @Override
-    public String deleteById(Integer id) {
+    public void deleteById(Integer id) {
         String sql = "DELETE FROM student WHERE id = :studentId";
 
         Map<String, Object> map = new HashMap<>();
         map.put("studentId", id);
 
         namedParameterJdbcTemplate.update(sql, map);
-
-        return "執行delete sql ";
     }
 
     @Override
-    public String insertList(List<Student> studentList) {
+    public void insertList(List<Student> studentList) {
         String sql = "INSERT INTO student (name) VALUE (:studentName)";
 
         MapSqlParameterSource[] parametersSources = new MapSqlParameterSource[studentList.size()];
@@ -65,11 +63,11 @@ public class StudentDaoImpl implements StudentDao{
         }
 
         namedParameterJdbcTemplate.batchUpdate(sql, parametersSources);
-        return "執行一批 insert sql ";
+
     }
 
     @Override
-    public String insert(Student student) {
+    public void insert(Student student) {
         String sql = "INSERT INTO student (name) VALUE (:studentName)";
 
         Map<String, Object> map = new HashMap<>();
@@ -82,6 +80,6 @@ public class StudentDaoImpl implements StudentDao{
         int id = keyHolder.getKey().intValue();
         System.out.println("mysql 自動生成 id = " + id);
 
-        return "執行insert sql ";
+
     }
 }

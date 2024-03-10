@@ -19,17 +19,17 @@ public class StudentServiceImpl implements StudentService{
     }
 
     @Override
-    public String deleteById(Integer id) {
-        return studentDao.deleteById(id);
+    public void deleteById(Integer id) {
+         studentDao.deleteById(id);
     }
 
     @Override
-    public String insertList(List<Student> studentList) {
-        return studentDao.insertList(studentList);
+    public void insertList(List<Student> studentList) {
+         studentDao.insertList(studentList);
     }
 
     @Override
-    public String insert(Student student) {
-        return studentDao.insert(student);
+    public void insert(Student student) {
+         studentDao.insert(student);
     }
 }

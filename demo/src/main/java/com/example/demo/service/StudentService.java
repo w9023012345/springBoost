@@ -8,9 +8,9 @@ public interface StudentService {
 
     Student getById(Integer id);
 
-    String deleteById(Integer id);
+    void deleteById(Integer id);
 
-    String insertList(List<Student> studentList);
+    void insertList(List<Student> studentList);
 
-    String insert(Student student);
+    void insert(Student student);
 }
