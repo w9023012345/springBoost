@@ -1,5 +1,8 @@
-package com.example.demo;
+package com.example.demo.controller;
 
+import com.example.demo.Student;
+import com.example.demo.StudnetRowMapper;
+import com.example.demo.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -16,6 +19,8 @@ public class StudentController {
 
     @Autowired
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
+    @Autowired
+    private StudentService studentService;
 
     @PostMapping("/students")
     public String insert(@RequestBody Student student) {
@@ -66,25 +71,7 @@ public class StudentController {
 
     @GetMapping("/students/{studentId}")
     public Student select(@PathVariable Integer studentId) {
-
-        String countSql = "SELECT count(*) FROM student";
-
-        Map<String,Object> countMap = new HashMap<>();
-
-        // 傳換成integer類型
-        Integer count = namedParameterJdbcTemplate.queryForObject(countSql, countMap, Integer.class);
-
-        System.out.println("student table總數 = " + count);
-
-        // 不要用*號拿全部資料，浪費效能
-        String sql = "SELECT id,name FROM student WHERE id = :studentId";
-
-        Map<String, Object> map = new HashMap<>();
-        map.put("studentId", studentId);
-
-        List<Student> list = namedParameterJdbcTemplate.query(sql, map, new StudnetRowMapper());
-
-        return list.size() > 0 ? list.get(0) : null;
+        return studentService.getById(studentId);
     }
 
 
