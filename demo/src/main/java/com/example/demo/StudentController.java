@@ -64,16 +64,28 @@ public class StudentController {
     }
 
 
-    @GetMapping("/students")
-    public List<Student> select() {
+    @GetMapping("/students/{studentId}")
+    public Student select(@PathVariable Integer studentId) {
+
+        String countSql = "SELECT count(*) FROM student";
+
+        Map<String,Object> countMap = new HashMap<>();
+
+        // 傳換成integer類型
+        Integer count = namedParameterJdbcTemplate.queryForObject(countSql, countMap, Integer.class);
+
+        System.out.println("student table總數 = " + count);
+
         // 不要用*號拿全部資料，浪費效能
-        String sql = "SELECT id,name FROM student";
+        String sql = "SELECT id,name FROM student WHERE id = :studentId";
 
         Map<String, Object> map = new HashMap<>();
+        map.put("studentId", studentId);
 
         List<Student> list = namedParameterJdbcTemplate.query(sql, map, new StudnetRowMapper());
 
-        return list;
+        return list.size() > 0 ? list.get(0) : null;
     }
+
 
 }
