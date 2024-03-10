@@ -63,4 +63,17 @@ public class StudentController {
         return "執行delete sql ";
     }
 
+
+    @GetMapping("/students")
+    public List<Student> select() {
+        // 不要用*號拿全部資料，浪費效能
+        String sql = "SELECT id,name FROM student";
+
+        Map<String, Object> map = new HashMap<>();
+
+        List<Student> list = namedParameterJdbcTemplate.query(sql, map, new StudnetRowMapper());
+
+        return list;
+    }
+
 }
