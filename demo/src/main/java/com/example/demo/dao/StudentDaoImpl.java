@@ -3,7 +3,10 @@ package com.example.demo.dao;
 import com.example.demo.Student;
 import com.example.demo.StudnetRowMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
@@ -35,5 +38,50 @@ public class StudentDaoImpl implements StudentDao{
         List<Student> list = namedParameterJdbcTemplate.query(sql, map, new StudnetRowMapper());
 
         return list.size() > 0 ? list.get(0) : null;
+    }
+
+    @Override
+    public String deleteById(Integer id) {
+        String sql = "DELETE FROM student WHERE id = :studentId";
+
+        Map<String, Object> map = new HashMap<>();
+        map.put("studentId", id);
+
+        namedParameterJdbcTemplate.update(sql, map);
+
+        return "執行delete sql ";
+    }
+
+    @Override
+    public String insertList(List<Student> studentList) {
+        String sql = "INSERT INTO student (name) VALUE (:studentName)";
+
+        MapSqlParameterSource[] parametersSources = new MapSqlParameterSource[studentList.size()];
+
+        for (int i = 0; i < studentList.size(); i++) {
+            Student student = studentList.get(i);
+            parametersSources[i] = new MapSqlParameterSource();
+            parametersSources[i].addValue("studentName", student.getName());
+        }
+
+        namedParameterJdbcTemplate.batchUpdate(sql, parametersSources);
+        return "執行一批 insert sql ";
+    }
+
+    @Override
+    public String insert(Student student) {
+        String sql = "INSERT INTO student (name) VALUE (:studentName)";
+
+        Map<String, Object> map = new HashMap<>();
+        map.put("studentName", student.getName());
+
+        KeyHolder keyHolder = new GeneratedKeyHolder();
+
+        namedParameterJdbcTemplate.update(sql, new MapSqlParameterSource(map), keyHolder);
+
+        int id = keyHolder.getKey().intValue();
+        System.out.println("mysql 自動生成 id = " + id);
+
+        return "執行insert sql ";
     }
 }
