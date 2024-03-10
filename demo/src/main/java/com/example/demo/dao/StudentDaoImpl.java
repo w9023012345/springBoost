@@ -1,7 +1,7 @@
 package com.example.demo.dao;
 
-import com.example.demo.Student;
-import com.example.demo.StudnetRowMapper;
+import com.example.demo.model.Student;
+import com.example.demo.mapper.StudnetRowMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
