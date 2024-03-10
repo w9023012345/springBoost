@@ -1,6 +1,7 @@
-package com.example.demo.model;
+package com.example.demo;
 
 public class Student {
+
     Integer id;
     String name;
 
