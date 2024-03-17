@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/7-5/demo.iml" filepath="$PROJECT_DIR$/7-5/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/springBoost.iml" filepath="$PROJECT_DIR$/.idea/springBoost.iml" />
     </modules>
   </component>

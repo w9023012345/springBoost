@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53acc5a5-d6cc-4c76-ba7b-5933816438b5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/7-5/src/test/java/com/example/demo/service/StudentServiceImplMockTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7-5/src/test/java/com/example/demo/service/StudentServiceImplSpyTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7-5/src/test/java/com/example/demo/dao/StudentDaoImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7-5/src/test/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7-5/src/test/resources/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7-5/src/test/resources/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/7-5/src/test/java/com/example/demo/dao/StudentDaoImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/7-5/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/7-5/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +52,9 @@
     "JUnit.StudentServiceImplMockTest.executor": "Run",
     "JUnit.StudentServiceImplMockTest.getById.executor": "Run",
     "JUnit.StudentServiceImplMockTest.getById2.executor": "Run",
+    "JUnit.StudentServiceImplSpyTest.executor": "Run",
+    "JUnit.StudentServiceImplSpyTest.insert.executor": "Run",
+    "JUnit.demo in demo.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -60,12 +66,15 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/lin/Documents/springBoost/7-5/src/test/java/com/example/demo/service",
+    "last_directory_selection": "C:/Users/lin/Documents/springBoost/7-5/src/test/java/com/example/demo",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -79,12 +88,28 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.demo.dao" />
       <recent name="com.example.demo.service" />
       <recent name="com.example.demo.controller" />
-      <recent name="com.example.demo.dao" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.StudentServiceImplSpyTest">
+  <component name="RunManager" selected="JUnit.demo in demo">
+    <configuration name="StudentDaoImplTest.getById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.dao.StudentDaoImplTest" />
+      <option name="METHOD_NAME" value="getById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="StudentServiceImplMockTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <extension name="coverage">
@@ -96,38 +121,6 @@
       <option name="PACKAGE_NAME" value="com.example.demo.service" />
       <option name="MAIN_CLASS_NAME" value="com.example.demo.service.StudentServiceImplMockTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StudentServiceImplMockTest.getById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.demo.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.demo.service" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.service.StudentServiceImplMockTest" />
-      <option name="METHOD_NAME" value="getById" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StudentServiceImplMockTest.getById2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.demo.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.demo.service" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.service.StudentServiceImplMockTest" />
-      <option name="METHOD_NAME" value="getById2" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -163,6 +156,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="demo in demo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/7-5/src/test/java/com/example/demo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.DemoApplication" />
@@ -172,11 +173,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.demo in demo" />
+        <item itemvalue="JUnit.StudentDaoImplTest.getById" />
         <item itemvalue="JUnit.StudentServiceImplSpyTest" />
         <item itemvalue="JUnit.StudentServiceImplSpyTest.insert" />
         <item itemvalue="JUnit.StudentServiceImplMockTest" />
-        <item itemvalue="JUnit.StudentServiceImplMockTest.getById2" />
-        <item itemvalue="JUnit.StudentServiceImplMockTest.getById" />
       </list>
     </recent_temporary>
   </component>
@@ -196,7 +197,7 @@
       <option name="presentableId" value="Default" />
       <updated>1710646932281</updated>
       <workItem from="1710646934302" duration="654000" />
-      <workItem from="1710647608968" duration="8746000" />
+      <workItem from="1710647608968" duration="12319000" />
     </task>
     <servers />
   </component>
