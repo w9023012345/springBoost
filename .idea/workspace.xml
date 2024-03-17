@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53acc5a5-d6cc-4c76-ba7b-5933816438b5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/7-5/src/test/java/com/example/demo/controller/StudentControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7-5/src/test/java/com/example/demo/service/StudentServiceImplMockTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7-5/src/test/java/com/example/demo/service/StudentServiceImplSpyTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/7-5/src/test/java/com/example/demo/dao/StudentDaoImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/7-5/src/test/java/com/example/demo/dao/StudentDaoImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/7-5/src/test/java/com/example/demo/dao/StudentDaoImplTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,12 +39,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.StudentControllerTest.create.executor": "Run",
     "JUnit.StudentControllerTest.getById.executor": "Run",
     "JUnit.StudentDaoImplTest.delectById.executor": "Run",
     "JUnit.StudentDaoImplTest.executor": "Run",
     "JUnit.StudentDaoImplTest.getById.executor": "Run",
     "JUnit.StudentDaoImplTest.insert.executor": "Run",
     "JUnit.StudentDaoImplTest.update.executor": "Run",
+    "JUnit.StudentServiceImplMockTest.executor": "Run",
+    "JUnit.StudentServiceImplMockTest.getById.executor": "Run",
+    "JUnit.StudentServiceImplMockTest.getById2.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -55,7 +60,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/lin/Documents/springBoost/7-5/src/test/java/com/example/demo",
+    "last_directory_selection": "C:/Users/lin/Documents/springBoost/7-5/src/test/java/com/example/demo/service",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -74,85 +79,85 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.demo.service" />
       <recent name="com.example.demo.controller" />
       <recent name="com.example.demo.dao" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.StudentControllerTest.create">
-    <configuration name="StudentControllerTest.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.StudentServiceImplSpyTest">
+    <configuration name="StudentServiceImplMockTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.demo.controller.*" />
+          <option name="PATTERN" value="com.example.demo.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.demo.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.controller.StudentControllerTest" />
-      <option name="METHOD_NAME" value="create" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.example.demo.service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.service.StudentServiceImplMockTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentControllerTest.getById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentServiceImplMockTest.getById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.demo.controller.*" />
+          <option name="PATTERN" value="com.example.demo.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.demo.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.controller.StudentControllerTest" />
+      <option name="PACKAGE_NAME" value="com.example.demo.service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.service.StudentServiceImplMockTest" />
       <option name="METHOD_NAME" value="getById" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentDaoImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentServiceImplMockTest.getById2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.demo.dao.*" />
+          <option name="PATTERN" value="com.example.demo.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.demo.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.dao.StudentDaoImplTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StudentDaoImplTest.insert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.demo.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.demo.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.dao.StudentDaoImplTest" />
-      <option name="METHOD_NAME" value="insert" />
+      <option name="PACKAGE_NAME" value="com.example.demo.service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.service.StudentServiceImplMockTest" />
+      <option name="METHOD_NAME" value="getById2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentDaoImplTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentServiceImplSpyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.demo.dao.*" />
+          <option name="PATTERN" value="com.example.demo.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.demo.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.dao.StudentDaoImplTest" />
-      <option name="METHOD_NAME" value="update" />
+      <option name="PACKAGE_NAME" value="com.example.demo.service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.service.StudentServiceImplSpyTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentServiceImplSpyTest.insert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo.service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.service.StudentServiceImplSpyTest" />
+      <option name="METHOD_NAME" value="insert" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -167,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.StudentControllerTest.create" />
-        <item itemvalue="JUnit.StudentControllerTest.getById" />
-        <item itemvalue="JUnit.StudentDaoImplTest" />
-        <item itemvalue="JUnit.StudentDaoImplTest.update" />
-        <item itemvalue="JUnit.StudentDaoImplTest.insert" />
+        <item itemvalue="JUnit.StudentServiceImplSpyTest" />
+        <item itemvalue="JUnit.StudentServiceImplSpyTest.insert" />
+        <item itemvalue="JUnit.StudentServiceImplMockTest" />
+        <item itemvalue="JUnit.StudentServiceImplMockTest.getById2" />
+        <item itemvalue="JUnit.StudentServiceImplMockTest.getById" />
       </list>
     </recent_temporary>
   </component>
@@ -191,7 +196,7 @@
       <option name="presentableId" value="Default" />
       <updated>1710646932281</updated>
       <workItem from="1710646934302" duration="654000" />
-      <workItem from="1710647608968" duration="6214000" />
+      <workItem from="1710647608968" duration="8746000" />
     </task>
     <servers />
   </component>
