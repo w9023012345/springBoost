@@ -62,7 +62,7 @@ public class StudentDaoImplTest {
         studentDao.update(newStudent);
 
         Student student = studentDao.getById(3);
-        assertNotNull(student);
+        assertNotNull(student );
         assertEquals("Tom", student.getName());
     }
 }
